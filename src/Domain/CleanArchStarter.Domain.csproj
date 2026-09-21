@@ -1,17 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
-
   <!--
     PRINCIPLE(static-analysis-enforced-invariant): ErrorProne.NET.CoreAnalyzers (EPC13)
     fails the build on a discarded Result/Result<T>.
   -->
   <ItemGroup>
-    <PackageReference Include="ErrorProne.NET.CoreAnalyzers" Version="0.9.0-beta.4" PrivateAssets="all" IncludeAssets="analyzers;build" />
+    <PackageReference Include="ErrorProne.NET.CoreAnalyzers" PrivateAssets="all" IncludeAssets="analyzers;build" />
   </ItemGroup>
-
 </Project>

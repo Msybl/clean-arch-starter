@@ -1,8 +1,5 @@
 # Not yet applicable in this project
 
-Principles from hexagonal / clean architecture that this project hasn't reached the
-point of needing yet — no code site exists to comment on.
-
 - **Command Bus / Query Bus** — not implemented. `CreateToDoItemUseCase` is still
   called directly. This is also when the `handle` naming would need revisiting: a bus
   dispatches to a handler by its `Handle` method, and this project's
@@ -18,5 +15,3 @@ point of needing yet — no code site exists to comment on.
   `Result<T>` — the revisit trigger for the current choice of `Result<T>`.
 - **Aggregates spanning multiple entities, Domain Services** — `ToDoItem` is a
   single entity; nothing to compose yet.
-- **Multi-module build-boundary enforcement** (an ArchUnit/NetArchTest-equivalent) —
-  a deliberate divergence, not yet implemented.
