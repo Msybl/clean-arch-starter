@@ -1,4 +1,27 @@
-# Not yet applicable in this project
+# Clean Architecture Starter
+
+A .NET 10 starter for hexagonal / clean architecture, built around a small ToDo example.
+
+## Structure
+
+```
+src/
+  Domain/          Entities, value objects, Result. No dependencies.
+  Application/     Use cases, input ports, output ports. Depends on Domain.
+  Infrastructure/  Output port implementations. Depends on Application.
+  Api/             HTTP entry point and composition root. Depends on Application, Infrastructure.
+```
+
+Package versions are managed centrally in `src/Directory.Packages.props`.
+
+## Run
+
+```bash
+dotnet build
+dotnet run --project src/Api
+```
+
+## Not yet applicable in this project
 
 - **Command Bus / Query Bus** — not implemented. `CreateToDoItemUseCase` is still
   called directly. This is also when the `handle` naming would need revisiting: a bus
