@@ -1,0 +1,8 @@
+root = true
+
+[*.cs]
+# Static-analysis-enforced invariant.
+# EPC13 (ErrorProne.NET.CoreAnalyzers): a Result/Result<T> (or other "possible-like"
+# type) returned from a call is discarded without being observed via IsSuccess/
+# IsFailure/Match. Nothing else in C# enforces that a fail-fast Result is actually checked.
+dotnet_diagnostic.EPC13.severity = error
